@@ -199,7 +199,7 @@ export default function Maze() {
       ref={containerRef}
       style={{
         width: "100%",
-        height: "90vh",
+        height: "calc(var(--vh, 1vh) * 90)",
         maxWidth: "calc(100vw - 40px)",
         boxSizing: "border-box",
         display: "flex",
@@ -213,7 +213,9 @@ export default function Maze() {
         <h2 style={{ textAlign: "center", margin: "8px 0", color: "#fff" }}>
           {message || "Consegue escapar do fogo?"}
         </h2>
-        <div style={{ flexShrink: 0 }}>
+        <div
+          style={{ flexShrink: 0, justifyContent: "center", display: "flex" }}
+        >
           <canvas
             ref={canvasRef}
             width={canvasSize}
