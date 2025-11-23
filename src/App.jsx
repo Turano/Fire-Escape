@@ -11,6 +11,8 @@ export default function App() {
         background: "#111",
         padding: "20px",
         color: "#eee",
+        minHeight: "100%",
+        boxSizing: "border-box",
       }}
     >
       <MazeCanvas />
